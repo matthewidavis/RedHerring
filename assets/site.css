@@ -1,0 +1,139 @@
+/* Red Herring - public pages. Same look as the extension: calm sea tones,
+   herring red kept for the fish and real danger. */
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('fonts/atkinson-hyperlegible-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('fonts/atkinson-hyperlegible-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --paper: #f3f7f6;
+  --surface: #ffffff;
+  --ink: #1b2a33;
+  --muted: #52656c;
+  --line: #d5e2e0;
+  --tide: #2f7f7a;
+  --tide-soft: #dcefec;
+  --amber: #a86d06;
+  --amber-soft: #fbefd6;
+  --red: #b42e34;
+  --red-soft: #fbe3e2;
+  --neutral: #7a8b90;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --paper: #12232b;
+    --surface: #182d36;
+    --ink: #e4eeec;
+    --muted: #9db2b5;
+    --line: #2a434c;
+    --tide: #5db8af;
+    --tide-soft: #1d3d3f;
+    --amber: #e0a63a;
+    --amber-soft: #3a3120;
+    --red: #f0676b;
+    --red-soft: #402528;
+    --neutral: #8fa2a6;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.6 'Atkinson Hyperlegible', system-ui, sans-serif;
+}
+a { color: var(--tide); text-underline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--tide); outline-offset: 2px; border-radius: 4px; }
+.muted { color: var(--muted); }
+
+/* Site header: the fish and name, two links. */
+.site-header { border-bottom: 1px solid var(--line); background: var(--surface); }
+.site-header .inner { max-width: 880px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; gap: 12px; }
+.site-header .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink); text-decoration: none; font-size: 18px; }
+.site-header .brand img { width: 36px; height: 36px; }
+.site-header nav { margin-left: auto; display: flex; gap: 20px; font-size: 16px; }
+.site-header nav a { text-decoration: none; }
+.site-header nav a[aria-current='page'] { color: var(--ink); font-weight: 700; }
+
+main { max-width: 880px; margin: 0 auto; padding: 48px 24px 80px; }
+main.prose { max-width: 760px; }
+
+h1 { font-size: clamp(30px, 4.6vw, 44px); line-height: 1.12; letter-spacing: -.015em; margin: 0 0 16px; }
+h2 { font-size: 26px; line-height: 1.25; margin: 56px 0 14px; }
+h3 { font-size: 19px; line-height: 1.3; margin: 28px 0 6px; }
+p, ul, ol { margin: 0 0 14px; }
+li + li { margin-top: 6px; }
+.lede { font-size: 20px; color: var(--muted); max-width: 56ch; }
+
+/* Hero on the guide. */
+.hero { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
+.hero img { width: 160px; height: 160px; }
+
+/* Contents list for the long guide. */
+.contents { margin-top: 32px; padding: 18px 22px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.contents h2 { font-size: 15px; margin: 0 0 8px; color: var(--muted); }
+.contents ol { margin: 0; padding-left: 30px; columns: 2; column-gap: 32px; }
+.contents li { break-inside: avoid; }
+
+/* The verdict colours, explained once. */
+.key { list-style: none; padding: 0; display: grid; gap: 12px; }
+.key li { display: grid; grid-template-columns: 16px 1fr; gap: 12px; align-items: start; margin: 0; }
+.key .swatch { width: 16px; height: 16px; border-radius: 50%; margin-top: 5px; }
+.key .danger { background: var(--red); }
+.key .caution { background: var(--amber); }
+.key .ok { background: var(--neutral); }
+
+figure { margin: 18px 0 22px; }
+figure img { display: block; max-width: 100%; height: auto; border-radius: 10px; }
+figcaption { font-size: 15px; color: var(--muted); margin-top: 8px; }
+
+/* Settings and permissions read as definition lists. */
+dl { margin: 0 0 14px; }
+dt { font-weight: 700; margin-top: 14px; }
+dd { margin: 2px 0 0; color: var(--muted); }
+
+table { width: 100%; border-collapse: collapse; margin: 8px 0 20px; font-size: 16px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+th { font-size: 14px; color: var(--muted); font-weight: 700; }
+.table-wrap { overflow-x: auto; }
+
+.callout { margin: 28px 0; padding: 20px 24px; border-radius: 14px; background: var(--amber-soft); }
+.callout h2, .callout h3 { margin-top: 0; }
+.callout p:last-child { margin-bottom: 0; }
+
+.summary { padding: 20px 24px; border-radius: 14px; background: var(--tide-soft); }
+.summary p:last-child { margin-bottom: 0; }
+
+kbd { font: inherit; font-size: .9em; padding: 1px 6px; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 6px; background: var(--surface); }
+
+.site-footer { border-top: 1px solid var(--line); }
+.site-footer .inner { max-width: 880px; margin: 0 auto; padding: 24px; font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 24px; }
+
+@media (max-width: 700px) {
+  body { font-size: 16px; }
+  main { padding: 32px 16px 64px; }
+  .site-header .inner, .site-footer .inner { padding-left: 16px; padding-right: 16px; }
+  .hero { grid-template-columns: 1fr; }
+  .hero img { width: 96px; height: 96px; order: -1; }
+  .contents ol { columns: 1; }
+  /* The privacy table stacks: what, then why and where it goes. */
+  table, tbody, tr, td { display: block; }
+  thead { display: none; }
+  tr { padding: 12px 0; border-bottom: 1px solid var(--line); }
+  td { border: 0; padding: 2px 0; }
+  td:first-child { font-weight: 700; }
+  td:nth-child(2)::before { content: 'Why: '; color: var(--muted); font-weight: 700; }
+  td:nth-child(3)::before { content: 'Where it goes: '; color: var(--muted); font-weight: 700; }
+}

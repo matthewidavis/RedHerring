@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Red Herring user guide</title>
+  <meta name="description" content="Red Herring explains why an email, sign-in page or download looks like a scam, in plain words. Everything runs on your computer.">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="./"><img src="assets/fish.png" alt="">Red Herring</a>
+      <nav aria-label="Site">
+        <a href="./" aria-current="page">User guide</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>A red herring is a misleading clue. So is every scam.</h1>
+        <p class="lede">Red Herring is a browser extension for Chrome. It reads the email or web page in front of you, notices the tricks scammers use, and tells you in plain words what's off. You still decide what to do.</p>
+      </div>
+      <img src="assets/fish.png" alt="The Red Herring fish">
+    </div>
+
+    <nav class="contents" aria-labelledby="contents-heading">
+      <h2 id="contents-heading">In this guide</h2>
+      <ol>
+        <li><a href="#install">Installing Red Herring</a></li>
+        <li><a href="#email">Notes on your emails</a></li>
+        <li><a href="#web">Warnings on websites</a></li>
+        <li><a href="#downloads">Dangerous downloads</a></li>
+        <li><a href="#check">Checking a text or link</a></li>
+        <li><a href="#popup">The toolbar fish</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#limits">What it can't do</a></li>
+        <li><a href="#faq">Questions</a></li>
+        <li><a href="#help">Getting help</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="install">Installing Red Herring</h2>
+    <ol>
+      <li>Open Red Herring's page on the Chrome Web Store (link coming soon) and choose <strong>Add to Chrome</strong>. If your organization installs it for you, it's already there.</li>
+      <li>Click the puzzle-piece icon in Chrome's toolbar and <strong>pin</strong> Red Herring, so the red fish is always visible.</li>
+      <li><strong>Refresh any Gmail tabs</strong> you already had open.</li>
+    </ol>
+    <p>That's all. There's no account and nothing to set up. A "How Red Herring works" page opens once to introduce it.</p>
+    <p>Red Herring works in Google Chrome and Microsoft Edge on a computer, with Gmail on the web.</p>
+
+    <h2 id="email">Notes on your emails</h2>
+    <p>When you open an email in Gmail, Red Herring checks it on your computer and adds a short note above it. The note starts closed: the first line says what's wrong. Choose <strong>See why</strong> to open it.</p>
+    <figure>
+      <img src="assets/example-note.png" width="641" height="367" alt="An opened Red Herring note headed 'This looks like a scam', listing strong signs: a sender pretending to be PayPal from a lookalike address, and a link that pretends to go to paypal.com.">
+      <figcaption>An opened note for a made-up scam email.</figcaption>
+    </figure>
+    <ul class="key">
+      <li><span class="swatch danger"></span><span><strong>Red: this looks like a scam.</strong> Don't click links, call numbers, reply or pay until you've checked another way.</span></li>
+      <li><span class="swatch caution"></span><span><strong>Amber: be careful with this one.</strong> Something is unusual. Read the reasons before you act.</span></li>
+      <li><span class="swatch ok"></span><span><strong>Grey: no specific warning signs.</strong> That's not the same as safe. Stay wary of anything asking for money, passwords or urgency.</span></li>
+    </ul>
+    <p>Inside the note, signs are grouped as strong, warning and minor, and <strong>Why these are warning signs</strong> explains each one, so you learn to spot the trick yourself next time.</p>
+
+    <h3>What it looks for</h3>
+    <ul>
+      <li>Senders pretending to be a company, a colleague or your own organization, including lookalike addresses such as <code>rnicrosoft.com</code>.</li>
+      <li>Emails that fail Gmail's own checks of who really sent them, or whose replies go somewhere else.</li>
+      <li>Links that show one address but go to another, and links to places scammers like to hide pages.</li>
+      <li>Pressure: urgency, threats, requests for payment, passwords, security codes or gift cards, and "call this number" scams.</li>
+      <li>Risky attachments, QR codes leading to fake sign-in pages, and tricks for slipping past spam filters.</li>
+    </ul>
+
+    <h3>"I know this sender"</h3>
+    <p>If a note warns about someone you genuinely know, open it and choose <strong>I know this sender</strong>, then confirm. Their emails stay quiet from then on, except if they ever fail Gmail's sender checks, which would mean someone is pretending to be them. You can undo this in Settings under <strong>People you know</strong>.</p>
+
+    <h3>Copy details</h3>
+    <p>Every note has a <strong>Copy details</strong> button. It copies a short summary (the verdict, the domains involved and the reasons, but not the email itself) so you can report a scam Red Herring missed, or a false alarm.</p>
+
+    <div class="callout">
+      <h3>One thing to remember</h3>
+      <p>No warning doesn't mean safe. If any message pressures you to pay, sign in or act fast, check with the sender another way: call a number you already know, or type the company's website yourself.</p>
+    </div>
+
+    <h2 id="web">Warnings on websites</h2>
+    <p>Red Herring also watches for the moments a scam website asks you to do something risky:</p>
+    <ul>
+      <li><strong>Fake sign-in pages</strong> dressed up as Microsoft, Google, your bank or your own organization, warned about before you type a password.</li>
+      <li><strong>"Paste this to prove you're not a robot"</strong> pages that copy a harmful command and ask you to run it.</li>
+      <li><strong>"Your computer is infected, call this number"</strong> pages.</li>
+      <li><strong>App permission screens</strong>, explained in plain words: who is asking, and for what.</li>
+      <li>Any page you <strong>opened from a suspicious email</strong>.</li>
+    </ul>
+    <p>Red warnings appear at the top of the page; amber ones in the corner. Close one with its <strong>×</strong>, <strong>Dismiss</strong> or <kbd>Esc</kbd>. A dismissed warning stays dismissed on that page.</p>
+    <p>A scam page could try to hide the warning about itself, so Red Herring also marks the toolbar fish with a red <strong>!</strong> for that tab, and shows a desktop notification for red warnings. If a page tries to hide its warning, you'll be told that too.</p>
+
+    <h2 id="downloads">Dangerous downloads</h2>
+    <p>Some files are dangerous before they're even opened. When a download looks dangerous, for example a program pretending to be a PDF, Red Herring <strong>pauses it before it's saved</strong> and asks:</p>
+    <ul>
+      <li><strong>Delete the download</strong>: the safe choice unless you were expecting exactly this file.</li>
+      <li><strong>Keep it anyway</strong>: the download carries on.</li>
+    </ul>
+    <p>The question appears on the page, in a notification and in the toolbar fish. If you use a download manager and this gets in its way, turn off <strong>Hold dangerous downloads</strong> in Settings; you'll still be warned.</p>
+
+    <h2 id="check">Checking a text or link</h2>
+    <p>Got a suspicious text message on your phone, or a link someone sent you? Click the toolbar fish, choose <strong>Check a message</strong>, paste it in and choose <strong>Check it</strong>. You get the same explanation as for an email. Nothing you paste is saved or sent anywhere.</p>
+
+    <h2 id="popup">The toolbar fish</h2>
+    <p>Click the red fish in Chrome's toolbar to see:</p>
+    <ul>
+      <li>Whether Red Herring is watching, and a running count of scam emails it has spotted.</li>
+      <li><strong>On this tab</strong>: any warning about the page you're on, or a paused download waiting for your decision.</li>
+      <li>Switches for each protection, a reminder of what the colours mean, <strong>Check a message</strong>, and links to the guide and Settings.</li>
+    </ul>
+    <p>If Red Herring ever can't read your emails (for example after a Gmail update), the fish says so, so silence never looks like safety.</p>
+
+    <h2 id="settings">Settings</h2>
+    <p>Open them from the toolbar fish. Your organization may manage some of them for you.</p>
+    <dl>
+      <dt>Protections</dt>
+      <dd>Turn each protection on or off, and fine-tune the individual checks under it.</dd>
+      <dt>Websites you trust</dt>
+      <dd>Emails and links from these sites skip the lookalike and link checks. Add your organization's own website so its emails never get flagged.</dd>
+      <dt>People you know</dt>
+      <dd>Senders you marked "I know this sender". Remove anyone at any time.</dd>
+      <dt>Notes on your emails</dt>
+      <dd>A note on every email (so you always know it was checked), or only when something looks wrong.</dd>
+      <dt>Dangerous downloads</dt>
+      <dd>Hold dangerous downloads until you decide (on by default).</dd>
+      <dt>Desktop notifications</dt>
+      <dd>For dangerous web pages and downloads (on by default, recommended), and for scam emails (off by default). A page trying to hide its warning, and the download question, always notify.</dd>
+      <dt>Extra checks (off by default)</dt>
+      <dd><strong>Check how new websites are</strong> looks up a website's registration date by sending only its domain name to the official registry; scam sites are often days old. <strong>On-device AI second opinion</strong> uses the AI model built into Google Chrome, entirely on your computer, to catch well-written scams. It can only add warnings, never remove them, and needs a capable computer.</dd>
+      <dt>What Red Herring remembers</dt>
+      <dd>Whether to remember which organizations email you (used to spot lookalikes of them), and a button to <strong>forget everything</strong>.</dd>
+    </dl>
+
+    <h2 id="limits">What it can't do</h2>
+    <ul>
+      <li>It can't see the Gmail phone app or desktop email programs such as Outlook. Use <strong>Check a message</strong> for anything on your phone.</li>
+      <li>Its checks are written for English.</li>
+      <li>No tool catches every scam. Red Herring explains the signs so that you can, too.</li>
+    </ul>
+
+    <h2 id="faq">Questions</h2>
+    <h3>Does Red Herring send my email anywhere?</h3>
+    <p>No. Every check runs on your computer, and there are no Red Herring servers. The one optional exception, off unless you turn it on, sends a website's domain name to its official registry to see how new it is. The <a href="privacy.html">privacy policy</a> has the details.</p>
+    <h3>Why did a genuine email get a warning?</h3>
+    <p>Real companies sometimes do things scammers do, like sending from an unusual address. Read the reasons; if you know the sender, choose <strong>I know this sender</strong>. If you think Red Herring got it wrong, Copy details and send them to us.</p>
+    <h3>Why does an email say it wasn't checked?</h3>
+    <p>Red Herring was updated or restarted while Gmail was open, or couldn't read that email. Refresh the Gmail tab.</p>
+    <h3>I don't see any desktop notifications.</h3>
+    <p>Check that your computer allows notifications from Chrome (on Windows: Settings, then System, then Notifications) and that "Do not disturb" is off.</p>
+    <h3>Will it slow my browser down?</h3>
+    <p>It's designed not to. Ordinary web pages get only a quick local look, and the full checks run only when a page or email has something worth checking.</p>
+
+    <h2 id="help">Getting help</h2>
+    <p>Found a scam Red Herring missed, a false alarm, or something confusing? Email <a href="mailto:red.herring.safety@gmail.com">red.herring.safety@gmail.com</a>. Using <strong>Copy details</strong> on the note is the most helpful way to describe it. Please don't forward personal email.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>Red Herring</span>
+      <a href="./">User guide</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="mailto:red.herring.safety@gmail.com">red.herring.safety@gmail.com</a>
+    </div>
+  </footer>
+</body>
+</html>

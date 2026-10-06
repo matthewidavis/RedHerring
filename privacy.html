@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Red Herring privacy policy</title>
+  <meta name="description" content="Red Herring checks email and web pages on your computer. It has no servers, no accounts and no telemetry.">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="./"><img src="assets/fish.png" alt="">Red Herring</a>
+      <nav aria-label="Site">
+        <a href="./">User guide</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="prose">
+    <h1>Privacy policy</h1>
+    <p class="muted">Effective 6 October 2026. Applies to the Red Herring browser extension.</p>
+
+    <div class="summary">
+      <p><strong>In short:</strong> Red Herring checks email and web pages on your own computer. It has no servers, no accounts and no analytics. It does not collect, sell or share your data, and nothing about your email or browsing is sent to Red Herring or anyone else.</p>
+      <p>The one exception is optional and off unless you turn it on: <em>Check how new websites are</em> sends a website's domain name (never any content) to the official registry for that domain.</p>
+    </div>
+
+    <h2>What Red Herring reads, and why</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">What</th><th scope="col">Why</th><th scope="col">Where it goes</th></tr></thead>
+        <tbody>
+          <tr><td>The email you open in Gmail: sender, subject, text, links and attachment names (attachments are never opened)</td><td>To check it for signs of a scam</td><td>Nowhere. Checked on your computer.</td></tr>
+          <tr><td>Pictures in that email that Gmail is already showing</td><td>To read QR codes, which scammers use to hide links</td><td>Read again from Google's own image servers, usually straight from your browser's cache. Pictures Gmail is blocking are never loaded. Decoded on your computer.</td></tr>
+          <tr><td>The email's technical details (Gmail's "Show original" view)</td><td>To see Gmail's own sender checks and where replies would go</td><td>Requested from Gmail with your existing sign-in, exactly as when you click "Show original". Nothing goes anywhere else.</td></tr>
+          <tr><td>Which Gmail account you're signed in with</td><td>To recognise your own organization's email domain, so impostors of it stand out</td><td>Nowhere.</td></tr>
+          <tr><td>On web pages: the title, headings, logo descriptions, whether there's a password box, and the start of the visible text</td><td>To spot fake sign-in pages, fake "your computer is infected" pages and "paste this command" tricks</td><td>Nowhere. Checked on your computer.</td></tr>
+          <tr><td>Text a web page puts on your clipboard</td><td>To catch pages that copy a harmful command for you to paste</td><td>Nowhere.</td></tr>
+          <tr><td>Downloads you start</td><td>To spot programs disguised as documents, and to pause dangerous ones until you decide</td><td>Nowhere.</td></tr>
+          <tr><td>Text you paste into <em>Check a message</em></td><td>To check a suspicious text or link from anywhere</td><td>Nowhere. Checked on your computer and not saved.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Optional extras (off unless you turn them on)</h2>
+    <dl>
+      <dt>Check how new websites are</dt>
+      <dd>Scam websites are often only days old. When this is on, Red Herring looks up when a domain was registered by sending <strong>only the domain name</strong> (for example <code>example.com</code>) to the official registry for that domain ending, found through the public list kept by IANA. No email content, addresses or page content is sent. Well-known brands, free email providers and domains you trust are skipped. Answers are kept on your computer for a week.</dd>
+      <dt>On-device AI second opinion</dt>
+      <dd>Uses the AI model built into Google Chrome, which runs entirely on your computer, to look for scams that rules can miss. <strong>Nothing is sent anywhere.</strong> Chrome downloads the model once, from Google, when you turn this on.</dd>
+    </dl>
+
+    <h2>What Red Herring keeps on your computer</h2>
+    <p>Everything is kept in the extension's storage on your computer. Nothing is synced to your Google account or sent anywhere.</p>
+    <ul>
+      <li><strong>Who has emailed you</strong>, so a stranger using a familiar name stands out. Stored as scrambled codes (shortened SHA-256 hashes), not readable addresses.</li>
+      <li><strong>Organizations that email you regularly</strong> (for example <code>yourbank.com</code>), so lookalikes of them stand out. Stored readably, and only while the setting "Remember which organizations email you" is on.</li>
+      <li><strong>Senders you marked "I know this sender"</strong>, as readable addresses so you can review them in Settings.</li>
+      <li><strong>Counts of emails flagged</strong> ("4 likely scams since…"), with scrambled codes so an email isn't counted twice.</li>
+      <li><strong>Your settings</strong>, and whether Red Herring has been able to read Gmail lately.</li>
+      <li><strong>Website ages you looked up</strong>, for a week, only if that optional check is on.</li>
+    </ul>
+    <p>A few short-lived records are kept in memory only and disappear when Chrome closes: which tab you opened from which email link, the current warning for each tab, downloads that are paused or already checked, the AI's opinion of emails you opened, and which emails already showed a notification.</p>
+    <p>Scrambled codes of guessable values can be confirmed by someone with access to your computer. They keep the record from being readable at a glance; they aren't encryption.</p>
+    <p><strong>To delete everything</strong>, open Red Herring's Settings and choose <em>Forget everything Red Herring remembers</em>, or remove the extension.</p>
+
+    <h2>Permissions, in plain words</h2>
+    <dl>
+      <dt>Read and change your data on mail.google.com</dt>
+      <dd>To check the emails you open and show a note above them.</dd>
+      <dt>Read and change your data on googleusercontent.com</dt>
+      <dd>Google's image server for Gmail, so QR codes in pictures can be read.</dd>
+      <dt>Read and change your data on all websites</dt>
+      <dd>To spot fake sign-in pages and copy-paste tricks wherever they appear. Pages are checked on your computer and nothing is sent anywhere.</dd>
+      <dt>Manage your downloads</dt>
+      <dd>To warn about disguised programs and pause dangerous downloads until you choose to delete or keep them. Pausing can be turned off in Settings.</dd>
+      <dt>Display notifications</dt>
+      <dd>For red warnings, so a scam page can't hide the warning about itself, and, if you turn it on, for scam emails. Your operating system may keep recent notifications in its notification list until you clear them.</dd>
+    </dl>
+
+    <h2>What Red Herring never does</h2>
+    <ul>
+      <li>Send your email, browsing, clipboard or downloads anywhere</li>
+      <li>Sell or share data, show ads, track you, or use analytics or crash reporting</li>
+      <li>Require an account or sign-in</li>
+      <li>Load code or fonts from the internet</li>
+    </ul>
+
+    <h2>"Copy details"</h2>
+    <p>The <em>Copy details</em> button on a note copies a short summary to your clipboard so you can choose to share it, for example to report a scam Red Herring missed. It includes the verdict, the sender's domain, the domains of links, and short quoted evidence such as a phrase or the subject. It doesn't include the email's body. Nothing is sent unless you paste it somewhere yourself.</p>
+
+    <h2>Organizations</h2>
+    <p>Organizations that install Red Herring for their staff can set its options through Chrome's management tools, for example turning off "Remember which organizations email you" for everyone. Red Herring reports nothing back to the organization.</p>
+
+    <h2>Chrome Web Store user data policy</h2>
+    <p>Red Herring's use of information complies with the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store User Data Policy</a>, including the Limited Use requirements. Data it handles is used only to provide its scam warnings to you, is not transferred to anyone, and is not used for advertising, credit-worthiness or any purpose unrelated to that.</p>
+
+    <h2>Children</h2>
+    <p>Red Herring doesn't knowingly collect information from anyone, including children, because it doesn't collect information at all.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the new version will be posted here with a new effective date. A change that sends any new kind of information off your computer would only ever be an optional feature, off unless you turn it on.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy, or a scam Red Herring missed: <a href="mailto:red.herring.safety@gmail.com">red.herring.safety@gmail.com</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>Red Herring</span>
+      <a href="./">User guide</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="mailto:red.herring.safety@gmail.com">red.herring.safety@gmail.com</a>
+    </div>
+  </footer>
+</body>
+</html>
